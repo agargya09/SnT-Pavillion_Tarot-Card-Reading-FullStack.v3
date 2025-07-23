@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IITK Tarot Card Reader</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="card-back.jpg" />
+</head>
+<body>
+  <!-- --------------  WELCOME PAGE -------------- -->
+  <section id="welcome" class="visible">
+    <header class="welcome-header">
+      <div class="logo-circle">IITK</div>
+      <h1>Tarot Card Reader</h1>
+      <p class="subtitle">Brain &amp; Cognitive Science Club</p>
+    </header>
+
+    <p class="intro">
+      Discover what the cosmic forces have in store for your IITK journey.  
+      Our mystical cards will reveal insights about your academic adventures,
+      social escapades, and the chaos that awaits you in the hallowed halls of IIT Kanpur!
+    </p>
+
+    <div class="form-group">
+      <label>Area&nbsp;of&nbsp;Interest</label>
+      <select id="areaSelect">
+        <option value="">Choose your destiny…</option>
+        <option>Academics</option>
+        <option>Social Life</option>
+        <option>Romantic</option>
+        <option>Extracurriculars</option>
+        <option>Future Plans</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Gender</label>
+      <select id="genderSelect">
+        <option value="">Select…</option>
+        <option>Female</option>
+        <option>Male</option>
+        <option>Non-binary</option>
+        <option>Prefer not to say</option>
+      </select>
+    </div>
+
+    <button id="startBtn" class="primary-btn" disabled>
+      Begin Mystical Reading
+    </button>
+  </section>
+
+  <!-- --------------  READER PAGE -------------- -->
+  <section id="reader" class="hidden">
+    <h2 class="reader-heading">Pick Any&nbsp;3 Cards</h2>
+    <div id="cardGrid" class="grid"></div>
+
+    <button id="revealBtn" class="primary-btn hidden">Reveal My Fortune</button>
+
+    <div id="fortuneBox" class="fortune hidden"></div>
+
+    <button id="againBtn" class="secondary-btn hidden">Read Again</button>
+  </section>
+
+  <script src="tarotData.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>
